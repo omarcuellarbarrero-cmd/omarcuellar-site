@@ -1,0 +1,328 @@
+/* ============================================
+   OMARCUELLAR.CO - Global Styles
+   Paleta: Institutional Blue #123A63
+           Deep Blue #0B223D
+           Accent Orange 10%
+           White #FFFFFF
+           Light Gray #D9DDE3
+   ============================================ */
+
+:root {
+  --institutional-blue: #123A63;
+  --deep-blue: #0B223D;
+  --accent-orange: #E85D04;
+  --white: #FFFFFF;
+  --light-gray: #D9DDE3;
+  --text-dark: #1a1a2e;
+  --text-muted: #5a5a6e;
+  --max-width: 960px;
+  --radius: 12px;
+  --shadow: 0 2px 12px rgba(11, 34, 61, 0.08);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--text-dark);
+  background: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tipografía accesible para mayores de 40 */
+h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.2; font-weight: 700; }
+h2 { font-size: clamp(1.4rem, 4vw, 1.9rem); line-height: 1.3; font-weight: 600; }
+h3 { font-size: clamp(1.15rem, 3vw, 1.4rem); line-height: 1.4; font-weight: 600; }
+p  { font-size: 1.05rem; line-height: 1.8; }
+
+a {
+  color: var(--institutional-blue);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover, a:focus {
+  color: var(--accent-orange);
+  outline: 2px solid var(--accent-orange);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Skip link para accesibilidad */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent-orange);
+  color: var(--white);
+  padding: 8px 16px;
+  z-index: 100;
+  border-radius: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Contenedor principal */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Botones grandes y táctiles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 32px;
+  min-height: 56px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--institutional-blue);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background: var(--deep-blue);
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(11, 34, 61, 0.2);
+}
+
+.btn-accent {
+  background: var(--accent-orange);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.btn-accent:hover, .btn-accent:focus {
+  background: #d45304;
+  color: var(--white);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--institutional-blue);
+  border: 2px solid var(--institutional-blue);
+}
+
+.btn-outline:hover, .btn-outline:focus {
+  background: var(--institutional-blue);
+  color: var(--white);
+}
+
+.btn-large {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px 32px;
+  font-size: 1.2rem;
+  min-height: 64px;
+}
+
+/* Tarjetas */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--light-gray);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(11, 34, 61, 0.12);
+}
+
+.card h3 {
+  color: var(--institutional-blue);
+  margin-bottom: 12px;
+}
+
+/* Secciones */
+.section {
+  padding: 60px 0;
+}
+
+.section-alt {
+  background: var(--light-gray);
+}
+
+.section-dark {
+  background: var(--deep-blue);
+  color: var(--white);
+}
+
+.section-dark h2,
+.section-dark h3 {
+  color: var(--white);
+}
+
+/* Grid responsive */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Lista con iconos */
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+.feature-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--accent-orange);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Pasos numerados */
+.steps {
+  counter-reset: step;
+}
+
+.step {
+  position: relative;
+  padding-left: 56px;
+  margin-bottom: 32px;
+}
+
+.step::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--institutional-blue);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.step h3 {
+  margin-bottom: 8px;
+  color: var(--institutional-blue);
+}
+
+/* Alertas */
+.alert {
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--accent-orange);
+  background: #fff5eb;
+  margin: 24px 0;
+}
+
+.alert p {
+  margin: 0;
+  color: var(--text-dark);
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  background: var(--deep-blue);
+  color: var(--light-gray);
+  padding: 40px 0 24px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--white);
+}
+
+footer a:hover {
+  color: var(--accent-orange);
+}
+
+/* Animaciones suaves */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Focus visible para navegación por teclado */
+:focus-visible {
+  outline: 3px solid var(--accent-orange);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Reducir movimiento para usuarios sensibles */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

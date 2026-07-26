@@ -1,0 +1,39 @@
+---
+export interface Props {
+  title: string;
+  subtitle: string;
+  ctaText?: string;
+  ctaHref?: string;
+  ctaSecondaryText?: string;
+  ctaSecondaryHref?: string;
+}
+
+const { title, subtitle, ctaText, ctaHref, ctaSecondaryText, ctaSecondaryHref } = Astro.props;
+---
+
+<section class="section section-dark" style="padding: 80px 0 60px;">
+  <div class="container" style="text-align: center; max-width: 720px;">
+    <h1 style="color: var(--white); margin-bottom: 20px; font-size: clamp(2rem, 6vw, 3rem);">
+      {title}
+    </h1>
+    <p style="color: var(--light-gray); font-size: 1.2rem; margin-bottom: 36px; line-height: 1.7;">
+      {subtitle}
+    </p>
+    <div style="display: flex; flex-direction: column; gap: 16px; align-items: center;">
+      {ctaText && ctaHref && (
+        <a href={ctaHref} class="btn btn-accent btn-large" style="max-width: 360px;">
+          {ctaText}
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      )}
+      {ctaSecondaryText && ctaSecondaryHref && (
+        <a href={ctaSecondaryHref} class="btn btn-outline" style="color: var(--white); border-color: var(--white); max-width: 360px; width: 100%;">
+          {ctaSecondaryText}
+        </a>
+      )}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Diagnósticos de televisores TRC y LCD con asistencia virtual. Reparaciones electrónicas explicadas paso a paso por Omar Cuellar." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="theme-color" content="#123A63" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title} | Omar Cuellar</title>
+  <link rel="stylesheet" href="/src/styles/global.css" />
+  <style is:global>
+    @import url('/src/styles/global.css');
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Ir al contenido principal</a>
+  <slot name="header" />
+  <main id="main">
+    <slot />
+  </main>
+  <slot name="footer" />
+</body>
+</html>

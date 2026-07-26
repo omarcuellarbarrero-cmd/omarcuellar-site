@@ -1,0 +1,113 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import AgentCard from "../components/AgentCard.astro";
+---
+
+<Layout title="Inicio" description="Diagnósticos de televisores TRC y LCD con asistencia virtual. Reparaciones electrónicas explicadas paso a paso.">
+  <Header slot="header" />
+
+  <Hero
+    title="Diagnósticos de TV con asistencia virtual"
+    subtitle="Herramientas inteligentes para reparar televisores TRC y LCD. Sin complicaciones, paso a paso, directo al diagnóstico."
+    ctaText="Ir al Agente TRC"
+    ctaHref="/agente-trc"
+    ctaSecondaryText="Ver Agente LCD"
+    ctaSecondaryHref="/agente-lcd"
+  />
+
+  <!-- Agentes -->
+  <section class="section" style="padding: 60px 0;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 12px; color: var(--institutional-blue);">
+        Elige tu tipo de televisor
+      </h2>
+      <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px; font-size: 1.1rem;">
+        Selecciona el agente virtual según la tecnología de tu pantalla
+      </p>
+
+      <div class="grid-2">
+        <AgentCard
+          title="Agente TRC"
+          description="Diagnóstico especializado para televisores de tubo de rayos catódicos. Identifica fallas en flyback, vertical, horizontal, fuente de poder y más."
+          features={[
+            "Análisis de fallas por síntomas visuales y sonoros",
+            "Guía de voltajes de prueba paso a paso",
+            "Recomendación de repuestos compatibles",
+            "Consejos de seguridad eléctrica"
+          ]}
+          href="/agente-trc"
+          ctaText="Abrir Agente TRC"
+          type="trc"
+        />
+
+        <AgentCard
+          title="Agente LCD"
+          description="Diagnóstico inteligente para pantallas planas LCD y LED. Resuelve problemas de imagen, retroiluminación, fuentes digitales y mainboard."
+          features={[
+            "Detección de fallas por comportamiento de la imagen",
+            "Pruebas de retroiluminación y t-con",
+            "Verificación de fuentes de alimentación",
+            "Guía de reemplazo de backlight"
+          ]}
+          href="/agente-lcd"
+          ctaText="Abrir Agente LCD"
+          type="lcd"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo funciona -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 40px; color: var(--institutional-blue);">
+        ¿Cómo funciona?
+      </h2>
+
+      <div class="steps">
+        <div class="step">
+          <h3>Selecciona el agente adecuado</h3>
+          <p>Elige entre TRC o LCD según el tipo de televisor que vas a reparar. Cada agente está entrenado para su tecnología específica.</p>
+        </div>
+
+        <div class="step">
+          <h3>Describe los síntomas</h3>
+          <p>Cuéntale al agente qué observas: imagen distorsionada, sin sonido, no enciende, líneas horizontales, etc. Sé lo más específico posible.</p>
+        </div>
+
+        <div class="step">
+          <h3>Recibe el diagnóstico</h3>
+          <p>El agente te guiará con preguntas claras y te dará un diagnóstico probable, los puntos de prueba y los repuestos que necesitas.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="/guia" class="btn btn-outline" style="max-width: 320px; width: 100%;">
+          Ver guía completa de uso
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Omar -->
+  <section class="section">
+    <div class="container" style="max-width: 720px; text-align: center;">
+      <h2 style="color: var(--institutional-blue); margin-bottom: 16px;">
+        Sobre Omar Cuellar
+      </h2>
+      <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 24px;">
+        Técnico en electrónica con años de experiencia reparando televisores TRC y LCD. 
+        He creado estos agentes virtuales para que cualquier persona, incluso sin experiencia previa, 
+        pueda identificar fallas con confianza y seguridad.
+      </p>
+      <div class="alert">
+        <p><strong>¿Primera vez aquí?</strong> Te recomiendo leer la <a href="/guia">guía de uso</a> antes de empezar. Es rápida y te ahorrará tiempo.</p>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

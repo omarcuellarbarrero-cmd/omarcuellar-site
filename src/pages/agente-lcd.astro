@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<Layout 
+  title="Agente LCD" 
+  description="Agente virtual de diagnóstico para televisores LCD y LED. Resuelve problemas de imagen, retroiluminación, fuentes digitales y mainboard."
+>
+  <Header slot="header" />
+
+  <Hero
+    title="Agente de Diagnóstico LCD / LED"
+    subtitle="Pantallas planas LCD y LED. Diagnóstico inteligente para fallas de imagen, retroiluminación y electrónica digital."
+    ctaText="Abrir Agente LCD en vivo"
+    ctaHref="https://agente-lcd.tudominio.com"
+  />
+
+  <section class="section">
+    <div class="container" style="max-width: 800px;">
+      <h2 style="color: var(--institutional-blue); margin-bottom: 20px;">
+        ¿Qué puede diagnosticar este agente?
+      </h2>
+
+      <div class="grid-2" style="margin-bottom: 40px;">
+        <div class="card">
+          <h3>🖥️ Pantalla en negro</h3>
+          <p>TV enciende pero no hay imagen. Problemas de retroiluminación (LED strips), inverter, fuente de retroiluminación o señal desde mainboard.</p>
+        </div>
+        <div class="card">
+          <h3>🎨 Fallas de imagen</h3>
+          <p>Líneas verticales u horizontales, manchas de color, imagen congelada, ghosting, doble imagen, problemas de T-CON o LVDS.</p>
+        </div>
+        <div class="card">
+          <h3>🔌 Sin encendido</h3>
+          <p>TV no responde al control, standby apagado, fuente de poder sin voltajes, problemas en circuito PFC o reguladores primarios.</p>
+        </div>
+        <div class="card">
+          <h3>📡 Fallas de señal</h3>
+          <p>Sin canales, no reconoce HDMI, smart TV sin internet, problemas de sintonizador, mainboard o memoria NAND/EMMC.</p>
+        </div>
+      </div>
+
+      <div class="alert">
+        <p><strong>⚠️ Importante:</strong> Aunque los LCD no tienen voltajes tan altos como los TRC, las fuentes con PFC pueden alcanzar 400V en el lado primario. Siempre desconecta y espera la descarga de capacitores.</p>
+      </div>
+
+      <h3 style="color: var(--institutional-blue); margin: 40px 0 20px;">
+        Herramientas recomendadas
+      </h3>
+      <ul class="feature-list">
+        <li>Multímetro digital con rango de capacitancia</li>
+        <li>Tester de retroiluminación LED (LED tester)</li>
+        <li>Programador universal para memorias SPI/EMMC</li>
+        <li>Estación de calor para reballing de chips BGA</li>
+        <li>Microscopio o lupa de buena iluminación</li>
+      </ul>
+
+      <div style="text-align: center; margin-top: 48px; padding: 32px; background: var(--light-gray); border-radius: var(--radius);">
+        <p style="font-size: 1.15rem; font-weight: 600; color: var(--institutional-blue); margin-bottom: 12px;">
+          ¿Listo para diagnosticar?
+        </p>
+        <p style="color: var(--text-muted); margin-bottom: 24px;">
+          El agente te guiará con preguntas específicas sobre tu pantalla plana.
+        </p>
+        <a href="https://agente-lcd.tudominio.com" class="btn btn-accent btn-large" target="_blank" rel="noopener noreferrer">
+          Iniciar Agente LCD
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 12px;">
+          Se abrirá en una nueva pestaña en tu agente virtual
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<Layout 
+  title="Agente TRC" 
+  description="Agente virtual de diagnóstico para televisores de tubo de rayos catódicos (TRC). Identifica fallas en flyback, vertical, horizontal y fuente de poder."
+>
+  <Header slot="header" />
+
+  <Hero
+    title="Agente de Diagnóstico TRC"
+    subtitle="Televisores de tubo de rayos catódicos. Diagnóstico guiado paso a paso para fallas comunes y complejas."
+    ctaText="Abrir Agente TRC en vivo"
+    ctaHref="https://agente-trc.tudominio.com"
+  />
+
+  <section class="section">
+    <div class="container" style="max-width: 800px;">
+      <h2 style="color: var(--institutional-blue); margin-bottom: 20px;">
+        ¿Qué puede diagnosticar este agente?
+      </h2>
+
+      <div class="grid-2" style="margin-bottom: 40px;">
+        <div class="card">
+          <h3>🔌 Fallas de encendido</h3>
+          <p>TV no enciende, led standby no responde, fuse quemado, reguladores en corto, fuente de poder sin voltajes de salida.</p>
+        </div>
+        <div class="card">
+          <h3>📺 Fallas de imagen</h3>
+          <p>Sin imagen con sonido, imagen reducida, líneas horizontales o verticales, imagen doblada, sin brillo o sin color.</p>
+        </div>
+        <div class="card">
+          <h3>🔊 Fallas de sonido</h3>
+          <p>Sin sonido, audio distorsionado, ruido de fondo excesivo, problemas en etapa de audio o demodulador.</p>
+        </div>
+        <div class="card">
+          <h3>⚡ Seguridad y protección</h3>
+          <p>TV en protección, relay hace clic repetidamente, sobrecorriente en horizontal, fallas en circuito de beam.</p>
+        </div>
+      </div>
+
+      <div class="alert">
+        <p><strong>⚠️ Importante:</strong> Trabajar con televisores TRC implica voltajes letales (hasta 30,000V en el flyback). Desconecta el equipo y descarga los capacitores antes de tocar cualquier componente.</p>
+      </div>
+
+      <h3 style="color: var(--institutional-blue); margin: 40px 0 20px;">
+        Herramientas recomendadas
+      </h3>
+      <ul class="feature-list">
+        <li>Multímetro digital con protección de rango</li>
+        <li>Osciloscopio (ideal, aunque no obligatorio)</li>
+        <li>Pinza amperimétrica para medir consumo</li>
+        <li>Desoldador y cautín de buena calidad</li>
+        <li>Destornilladores aislados para trabajar cerca del flyback</li>
+      </ul>
+
+      <div style="text-align: center; margin-top: 48px; padding: 32px; background: var(--light-gray); border-radius: var(--radius);">
+        <p style="font-size: 1.15rem; font-weight: 600; color: var(--institutional-blue); margin-bottom: 12px;">
+          ¿Listo para diagnosticar?
+        </p>
+        <p style="color: var(--text-muted); margin-bottom: 24px;">
+          El agente te hará preguntas claras para llegar al diagnóstico correcto.
+        </p>
+        <a href="https://agente-trc.tudominio.com" class="btn btn-accent btn-large" target="_blank" rel="noopener noreferrer">
+          Iniciar Agente TRC
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 12px;">
+          Se abrirá en una nueva pestaña en tu agente virtual
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>
