@@ -1,0 +1,13 @@
+<script is:inline>
+  // Corrige links relativos a URLs absolutas para evitar problema de puerto :4321
+  (function() {
+    var baseUrl = 'https://omarcuellar.co';
+    var links = document.querySelectorAll('a[href^="/"]');
+    links.forEach(function(link) {
+      var href = link.getAttribute('href');
+      if (href && href.startsWith('/') && !href.startsWith('//')) {
+        link.setAttribute('href', baseUrl + href);
+      }
+    });
+  })();
+</script>
