@@ -1,0 +1,45 @@
+---
+export interface Props {
+  href?: string;
+  text?: string;
+}
+
+const { href = "/", text = "← Volver al inicio" } = Astro.props;
+---
+
+<a 
+  href={href}
+  style=""
+  class="back-btn"
+>
+  <span style="font-size: 1.3rem; line-height: 1;">←</span>
+  <span>{text}</span>
+</a>
+
+<style>
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background: var(--light-gray, #D9DDE3);
+    color: var(--institutional-blue, #123A63);
+    font-weight: 600;
+    font-size: 1.05rem;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 24px;
+    transition: background 0.2s, transform 0.15s;
+    min-height: 52px;
+  }
+  .back-btn:hover,
+  .back-btn:focus {
+    background: #c5ccd6;
+    transform: translateX(-4px);
+    outline: 3px solid var(--accent-orange, #E85D04);
+    outline-offset: 2px;
+  }
+  .back-btn:active {
+    transform: scale(0.98);
+  }
+</style>

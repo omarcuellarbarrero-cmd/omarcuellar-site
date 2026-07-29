@@ -6,7 +6,7 @@ import Footer from "../components/Footer.astro";
 
 <Layout 
   title="Guía de Uso" 
-  description="Guía paso a paso para usar los agentes virtuales de diagnóstico de televisores TRC y LCD de Omar Cuellar."
+  description="Guía paso a paso para usar los recursos de reparación de televisores TRC y LCD/LED de Omar Cuellar."
 >
   <Header slot="header" />
 
@@ -16,49 +16,43 @@ import Footer from "../components/Footer.astro";
         Guía de uso
       </h1>
       <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 40px;">
-        Todo lo que necesitas saber para sacarle el máximo provecho a los agentes de diagnóstico.
+        Todo lo que necesitas saber para sacarle el máximo provecho a los recursos de diagnóstico.
       </p>
 
       <div class="steps">
         <div class="step">
-          <h3>Identifica el tipo de televisor</h3>
-          <p>Antes de empezar, asegúrate de saber si tu televisor es <strong>TRC</strong> (tubo grueso, antiguo, con pantalla curva o plana pero con caja profunda) o <strong>LCD/LED</strong> (pantalla plana, delgada, moderna). Si no estás seguro, mira la etiqueta trasera del equipo.</p>
+          <h3>Elige tu recurso</h3>
+          <p><strong>Fundamentos TRC/LCD</strong> es gratuito y educativo. Ideal si estás empezando.<br><strong>Tips de Fallas</strong> es de pago y contiene casos puntuales para resolver rápido.</p>
         </div>
 
         <div class="step">
-          <h3>Abre el agente correcto</h3>
-          <p>Desde el menú de navegación o la página de inicio, selecciona el agente que corresponda a tu televisor. Cada uno está entrenado con conocimiento específico de su tecnología.</p>
+          <h3>Accede a la app</h3>
+          <p>Desde el menú de navegación o la página de inicio, selecciona el recurso que necesites. Cada uno abre en su propia aplicación.</p>
         </div>
 
         <div class="step">
-          <h3>Describe los síntomas con claridad</h3>
-          <p>Cuéntale al agente exactamente qué pasa con tu TV. Algunos ejemplos útiles:</p>
-          <ul style="margin-top: 12px; padding-left: 20px; color: var(--text-muted);">
-            <li>"Enciende pero no hay imagen, solo sonido"</li>
-            <li>"Tiene líneas horizontales en la mitad de la pantalla"</li>
-            <li>"El led de standby parpadea 5 veces y se apaga"</li>
-            <li>"Huele a quemado cuando la enciendo"</li>
-          </ul>
+          <h3>En Fundamentos: explora por tema</h3>
+          <p>Navega por bloques funcionales, herramientas o seguridad. Lee y aplica a tu propio ritmo. No necesitas cuenta.</p>
         </div>
 
         <div class="step">
-          <h3>Responde las preguntas del agente</h3>
-          <p>El agente te hará preguntas específicas para descartar posibilidades. Responde lo mejor que puedas. Si no sabes algo, di "no sé" — el agente ajustará el camino.</p>
+          <h3>En Tips: busca por síntoma</h3>
+          <p>Describe el falla de tu televisor y busca el tip que más se parezca. Cada caso incluye síntoma, causa, puntos de prueba y repuesto.</p>
         </div>
 
         <div class="step">
-          <h3>Sigue las instrucciones de prueba</h3>
-          <p>El agente te indicará qué medir, dónde medir y con qué herramienta. Tómate tu tiempo. Si algo no queda claro, puedes preguntar de nuevo.</p>
+          <h3>Responde las preguntas del sistema</h3>
+          <p>Si el tip te pide que verifiques algo, hazlo antes de seguir. Así llegarás al diagnóstico correcto sin dar vueltas.</p>
         </div>
 
         <div class="step">
           <h3>Obtén el diagnóstico y repuestos</h3>
-          <p>Al final, el agente te dará un diagnóstico probable, los componentes a revisar y los repuestos que podrías necesitar. Anota todo antes de empezar a desarmar.</p>
+          <p>Al final tendrás un camino claro: qué medir, dónde medirlo y qué componente cambiar. Anota todo antes de desarmar.</p>
         </div>
       </div>
 
       <div class="alert" style="margin-top: 40px;">
-        <p><strong>💡 Consejo:</strong> Si el agente no responde o se queda "pensando", probablemente sea un problema de conexión a Internet. Recarga la página y vuelve a intentarlo. Los agentes están alojados en un VPS independiente.</p>
+        <p><strong>💡 Consejo:</strong> Si la app no responde o se queda "pensando", probablemente sea un problema de conexión a Internet. Recarga la página y vuelve a intentarlo.</p>
       </div>
 
       <h2 style="color: var(--institutional-blue); margin: 48px 0 24px;">
@@ -68,21 +62,21 @@ import Footer from "../components/Footer.astro";
       <div style="display: flex; flex-direction: column; gap: 20px;">
         <details class="card" style="cursor: pointer;">
           <summary style="font-weight: 600; color: var(--institutional-blue); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-            ¿Los agentes reemplazan a un técnico?
+            ¿Los recursos reemplazan a un técnico?
             <span style="color: var(--accent-orange); font-size: 1.4rem;">+</span>
           </summary>
           <p style="margin-top: 16px; color: var(--text-muted);">
-            No. Son herramientas de apoyo para diagnosticar. La reparación física requiere conocimiento práctico, herramientas adecuadas y precauciones de seguridad. Si no te sientes seguro, busca ayuda profesional.
+            No. Son herramientas de apoyo. La reparación física requiere conocimiento práctico, herramientas adecuadas y precauciones de seguridad. Si no te sientes seguro, busca ayuda profesional.
           </p>
         </details>
 
         <details class="card" style="cursor: pointer;">
           <summary style="font-weight: 600; color: var(--institutional-blue); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-            ¿Necesito pagar para usar los agentes?
+            ¿Necesito pagar por los Fundamentos?
             <span style="color: var(--accent-orange); font-size: 1.4rem;">+</span>
           </summary>
           <p style="margin-top: 16px; color: var(--text-muted);">
-            No. Los agentes de diagnóstico son gratuitos. Si en el futuro hay cursos o contenido premium, se anunciará claramente.
+            No. Los Fundamentos TRC/LCD son gratuitos y abiertos. Solo Tips de Fallas requiere una suscripción activa.
           </p>
         </details>
 
@@ -92,7 +86,7 @@ import Footer from "../components/Footer.astro";
             <span style="color: var(--accent-orange); font-size: 1.4rem;">+</span>
           </summary>
           <p style="margin-top: 16px; color: var(--text-muted);">
-            Sí, todo el sitio y los agentes están optimizados para funcionar bien en celulares con poca cobertura y datos móviles.
+            Sí, todo el sitio y las apps están optimizados para funcionar bien en celulares con poca cobertura y datos móviles.
           </p>
         </details>
 
@@ -102,21 +96,21 @@ import Footer from "../components/Footer.astro";
             <span style="color: var(--accent-orange); font-size: 1.4rem;">+</span>
           </summary>
           <p style="margin-top: 16px; color: var(--text-muted);">
-            Los agentes usan probabilidades basadas en síntomas. Si el diagnóstico no coincide, vuelve a iniciar la conversación con más detalles. También puedes contactarme directamente para casos especiales.
+            Los tips usan probabilidades basadas en síntomas. Si no coincide, vuelve a buscar con más detalles. También puedes contactarme directamente para casos especiales.
           </p>
         </details>
       </div>
 
       <div style="text-align: center; margin-top: 48px; padding: 32px; background: var(--light-gray); border-radius: var(--radius);">
         <p style="font-size: 1.15rem; font-weight: 600; color: var(--institutional-blue); margin-bottom: 12px;">
-          ¿Listo para diagnosticar?
+          ¿Listo para empezar?
         </p>
         <div style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
-          <a href="/agente-trc" class="btn btn-primary btn-large" style="max-width: 320px;">
-            Ir al Agente TRC
+          <a href="/basico" class="btn btn-primary btn-large" style="max-width: 320px;">
+            Ir a Fundamentos (Gratis)
           </a>
-          <a href="/agente-lcd" class="btn btn-primary btn-large" style="max-width: 320px; background: var(--deep-blue);">
-            Ir al Agente LCD
+          <a href="/tips" class="btn btn-primary btn-large" style="max-width: 320px; background: var(--deep-blue);">
+            Ir a Tips de Fallas
           </a>
         </div>
       </div>

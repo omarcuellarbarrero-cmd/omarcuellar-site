@@ -19,7 +19,7 @@ FROM nginx:alpine
 # Copiar el build estático al directorio de Nginx
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Configuración simple de Nginx
-RUN echo 'server {     listen 80;     server_name localhost;     root /usr/share/nginx/html;     index index.html;     location / {         try_files $uri $uri/ /index.html;     }     gzip on;     gzip_types text/css application/javascript application/json text/html; }' > /etc/nginx/conf.d/default.conf
+# Configuración de Nginx escuchando en puerto 4321 (Coolify espera este puerto)
+RUN echo 'server {     listen 4321;     server_name localhost;     root /usr/share/nginx/html;     index index.html;     location / {         try_files $uri $uri/ /index.html;     }     gzip on;     gzip_types text/css application/javascript application/json text/html text/plain; }' > /etc/nginx/conf.d/default.conf
 
-EXPOSE 80
+EXPOSE 4321

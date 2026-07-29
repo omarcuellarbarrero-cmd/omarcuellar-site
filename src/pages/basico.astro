@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<Layout 
+  title="Básico TRC/LCD" 
+  description="Fundamentos básicos de televisores TRC y LCD/LED. Aprende los conceptos esenciales para entender y reparar pantallas."
+>
+  <Header slot="header" />
+
+  <Hero
+    title="Fundamentos TRC y LCD/LED"
+    subtitle="Contenido educativo gratuito. Conceptos básicos, bloques funcionales, herramientas y seguridad para reparar televisores."
+    ctaText="Ir a la app de fundamentos"
+    ctaHref="https://fundamentos.omarcuellar.co"
+  />
+
+  <section class="section">
+    <div class="container" style="max-width: 800px;">
+      <div style="display: inline-block; background: #e8f5e9; color: #2e7d32; font-weight: 700; font-size: 0.9rem; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;">
+        ✅ GRATIS — Contenido educativo abierto
+      </div>
+
+      <h2 style="color: var(--institutional-blue); margin-bottom: 20px;">
+        ¿Qué aprenderás aquí?
+      </h2>
+
+      <div class="grid-2" style="margin-bottom: 40px;">
+        <div class="card">
+          <h3>📺 Bloques funcionales del TRC</h3>
+          <p>Entiende cómo funciona un televisor de tubo: sintonizador, video, audio, deflexión horizontal y vertical, fuente de poder y el famoso flyback.</p>
+        </div>
+        <div class="card">
+          <h3>🖥️ Bloques funcionales del LCD/LED</h3>
+          <p>Conoce las etapas de una pantalla plana: mainboard, fuente de alimentación, T-CON, retroiluminación (LED strips) y panel.</p>
+        </div>
+        <div class="card">
+          <h3>🔧 Herramientas esenciales</h3>
+          <p>Qué multímetro comprar, para qué sirve un osciloscopio, cómo usar un tester de retroiluminación y qué cautín necesitas.</p>
+        </div>
+        <div class="card">
+          <h3>⚡ Seguridad eléctrica</h3>
+          <p>Voltajes peligrosos, cómo descargar capacitores, precauciones con el flyback (30,000V) y el lado primario de fuentes con PFC.</p>
+        </div>
+      </div>
+
+      <div class="alert">
+        <p><strong>💡 Ideal para principiantes:</strong> Si estás empezando en la reparación de televisores, este contenido te dará las bases sólidas para no perderte cuando veas un diagrama o un equipo desarmado.</p>
+      </div>
+
+      <h3 style="color: var(--institutional-blue); margin: 40px 0 20px;">
+        Temas que cubrimos
+      </h3>
+      <ul class="feature-list">
+        <li>Identificación de componentes en la placa principal</li>
+        <li>Cómo leer un diagrama esquemático básico</li>
+        <li>Señales de video y sincronización: qué son y dónde medirlas</li>
+        <li>Diferencias entre TRC, LCD, LED y OLED</li>
+        <li>Cómo usar el multímetro sin quemar nada</li>
+        <li>Primeros pasos al recibir un televisor averiado</li>
+      </ul>
+
+      <div style="text-align: center; margin-top: 48px; padding: 32px; background: var(--light-gray); border-radius: var(--radius);">
+        <p style="font-size: 1.15rem; font-weight: 600; color: var(--institutional-blue); margin-bottom: 12px;">
+          ¿Listo para aprender?
+        </p>
+        <p style="color: var(--text-muted); margin-bottom: 24px;">
+          Accede gratis a todos los fundamentos de reparación de TV.
+        </p>
+        <a href="https://fundamentos.omarcuellar.co" class="btn btn-accent btn-large" target="_blank" rel="noopener noreferrer">
+          Abrir app de fundamentos
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 12px;">
+          Contenido gratuito, sin registro
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

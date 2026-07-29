@@ -6,56 +6,101 @@ import Hero from "../components/Hero.astro";
 import AgentCard from "../components/AgentCard.astro";
 ---
 
-<Layout title="Inicio" description="Diagnósticos de televisores TRC y LCD con asistencia virtual. Reparaciones electrónicas explicadas paso a paso.">
+<Layout title="Inicio" description="Fundamentos y tips de diagnóstico para televisores TRC y LCD/LED. Reparaciones electrónicas explicadas paso a paso por Omar Cuellar.">
   <Header slot="header" />
 
   <Hero
-    title="Diagnósticos de TV con asistencia virtual"
-    subtitle="Herramientas inteligentes para reparar televisores TRC y LCD. Sin complicaciones, paso a paso, directo al diagnóstico."
-    ctaText="Ir al Agente Sobre TV"
-    ctaHref="/agente-trc"
-    ctaSecondaryText="Ver Agente LCD"
-    ctaSecondaryHref="/agente-lcd"
+    title="Reparación de TV con Omar Cuellar"
+    subtitle="Fundamentos gratuitos y tips de diagnóstico profesional para televisores TRC y LCD/LED. Aprende o resuelve, tú eliges."
+    ctaText="Ver Fundamentos Gratis"
+    ctaHref="/basico"
+    ctaSecondaryText="Ver Tips de Fallas"
+    ctaSecondaryHref="/tips"
   />
 
-  <!-- Agentes -->
+  <!-- Apps -->
   <section class="section" style="padding: 60px 0;">
     <div class="container">
       <h2 style="text-align: center; margin-bottom: 12px; color: var(--institutional-blue);">
-        Elige tu tipo de televisor
+        Elige tu herramienta
       </h2>
       <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px; font-size: 1.1rem;">
-        Selecciona el agente virtual según la tecnología de tu pantalla
+        Contenido educativo gratuito o tips profesionales de diagnóstico
       </p>
 
       <div class="grid-2">
-        <AgentCard
-          title="Agente: Aprende sobre TV"
-          description="Definiciones sencillas sobre las distintas secciones en los televisores TRC y LCD/LED."
-          features={[
-            "Explicaciones como: Qué es el Flyback, el Circuito Vertical, la tarjeta T-CON, el Backlight, los transistores TFT, etc.",
-            "Guía sobre las fallas más comunes",
-            "Recomendación de repuestos compatibles",
-            "Consejos de seguridad eléctrica"
-          ]}
-          href="/agente-trc"
-          ctaText="Abrir Agente sobre TV TRC/LCD"
-          type="trc"
-        />
+        <!-- Card Básico -->
+        <article class="card" style="display: flex; flex-direction: column; height: 100%; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 16px; right: 16px; background: #e8f5e9; color: #2e7d32; font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 20px; z-index: 10;">
+            GRATIS
+          </div>
 
-        <AgentCard
-          title="Agente Tips TV TRC/LCD/LED"
-          description="Diagnóstico inteligente para pantallas planas LCD y LED. Resuelve problemas de imagen, retroiluminación, fuentes digitales y mainboard."
-          features={[
-            "Detección de fallas por comportamiento de la imagen",
-            "Pruebas de retroiluminación y t-con",
-            "Verificación de fuentes de alimentación",
-            "Guía de reemplazo de backlight"
-          ]}
-          href="/agente-lcd"
-          ctaText="Abrir Agente Tips TV"
-          type="lcd"
-        />
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+            <div style="width: 52px; height: 52px; border-radius: 14px; background: #123A63; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+            </div>
+            <h3 style="margin: 0; color: var(--institutional-blue);">Básico TRC/LCD</h3>
+          </div>
+
+          <p style="color: var(--text-muted); margin-bottom: 20px; flex-grow: 1;">
+            Fundamentos esenciales para entender televisores TRC y LCD/LED. Bloques funcionales, herramientas, seguridad y primeros pasos. Ideal si estás empezando.
+          </p>
+
+          <ul class="feature-list" style="margin-bottom: 24px;">
+            <li>Bloques funcionales de TRC y LCD/LED</li>
+            <li>Herramientas esenciales y su uso</li>
+            <li>Seguridad eléctrica y precauciones</li>
+            <li>Cómo leer diagramas y medir señales</li>
+          </ul>
+
+          <a href="/basico" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            Ver fundamentos
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </article>
+
+        <!-- Card Tips -->
+        <article class="card" style="display: flex; flex-direction: column; height: 100%; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 16px; right: 16px; background: #fff3e0; color: #e65100; font-weight: 700; font-size: 0.8rem; padding: 4px 12px; border-radius: 20px; z-index: 10;">
+            DE PAGO
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+            <div style="width: 52px; height: 52px; border-radius: 14px; background: #0B223D; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+            </div>
+            <h3 style="margin: 0; color: var(--institutional-blue);">Tips de Fallas</h3>
+          </div>
+
+          <p style="color: var(--text-muted); margin-bottom: 20px; flex-grow: 1;">
+            Más de 30 tips de diagnóstico para casos puntuales. Síntoma, causa, puntos de prueba y repuesto. Para técnicos que necesitan resolver rápido.
+          </p>
+
+          <ul class="feature-list" style="margin-bottom: 24px;">
+            <li>30+ casos reales documentados</li>
+            <li>Diagnóstico rápido sin probar al azar</li>
+            <li>Fichas técnicas con voltajes y fotos</li>
+            <li>Actualizaciones con nuevos casos</li>
+          </ul>
+
+          <a href="/tips" class="btn btn-primary" style="width: 100%; justify-content: center; background: var(--deep-blue);">
+            Ver tips de fallas
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </article>
       </div>
     </div>
   </section>
@@ -69,18 +114,18 @@ import AgentCard from "../components/AgentCard.astro";
 
       <div class="steps">
         <div class="step">
-          <h3>Selecciona el agente adecuado</h3>
-          <p>Elige entre TRC o LCD según el tipo de televisor que vas a reparar. Cada agente está entrenado para su tecnología específica.</p>
+          <h3>Elige tu nivel</h3>
+          <p>Si estás empezando, ve a <strong>Fundamentos</strong> (gratis). Si ya tienes experiencia y necesitas resolver un caso, entra a <strong>Tips de Fallas</strong> (con suscripción).</p>
         </div>
 
         <div class="step">
-          <h3>Describe los síntomas</h3>
-          <p>Cuéntale al agente qué observas: imagen distorsionada, sin sonido, no enciende, líneas horizontales, etc. Sé lo más específico posible.</p>
+          <h3>Busca o navega</h3>
+          <p>En Fundamentos explora los temas por categoría. En Tips busca por síntoma, modelo o chasis para encontrar el caso que se parece al tuyo.</p>
         </div>
 
         <div class="step">
-          <h3>Recibe el diagnóstico</h3>
-          <p>El agente te guiará con preguntas claras y te dará un diagnóstico probable, los puntos de prueba y los repuestos que necesitas.</p>
+          <h3>Aplica y repara</h3>
+          <p>Sigue las instrucciones paso a paso. Cada tip incluye qué medir, dónde medirlo y qué repuesto necesitas.</p>
         </div>
       </div>
 
@@ -99,8 +144,8 @@ import AgentCard from "../components/AgentCard.astro";
         Sobre Omar Cuellar
       </h2>
       <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 24px;">
-        Técnico en electrónica con años de experiencia reparando televisores TRC y LCD. 
-        He creado estos agentes virtuales para que cualquier persona, incluso sin experiencia previa, 
+        Técnico en electrónica con años de experiencia reparando televisores TRC y LCD/LED. 
+        He creado estos recursos para que cualquier persona, desde principiantes hasta técnicos avanzados, 
         pueda identificar fallas con confianza y seguridad.
       </p>
       <div class="alert">
