@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
+  site: 'https://omarcuellar.co',
   output: 'static',
   compressHTML: true,
   build: {
