@@ -1,0 +1,20 @@
+<script is:inline>
+  // 1. Redirección de emergencia: si estamos en puerto 4321, ir al dominio limpio
+  if (window.location.port === '4321' || window.location.href.includes(':4321')) {
+    window.location.replace('https://omarcuellar.co' + window.location.pathname + window.location.search);
+  }
+
+  // 2. Forzar HTTPS si entramos por HTTP
+  if (window.location.protocol === 'http:' && window.location.hostname === 'omarcuellar.co') {
+    window.location.replace('https://omarcuellar.co' + window.location.pathname + window.location.search);
+  }
+
+  // 3. Desregistrar cualquier Service Worker viejo que cause el problema del puerto 4321
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      for (var i = 0; i < registrations.length; i++) {
+        registrations[i].unregister();
+      }
+    });
+  }
+</script>
