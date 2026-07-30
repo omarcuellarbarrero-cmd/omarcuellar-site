@@ -8,3 +8,7 @@ export default defineConfig({
     format: 'directory'
   }
 });
+export default defineConfig({
+  site: "https://omarcuellar.co",
+  trailingSlash: "ignore", // no fuerza redirect, acepta ambas formas
+});
